@@ -1,26 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jVA-1r-7JT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ARView-->
-        <scene sceneID="tne-QT-ifu">
+        <!--View Controller-->
+        <scene sceneID="OhU-5N-ZJz">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="target" customModuleProvider="target" sceneMemberID="viewController">
-                    <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="jVA-1r-7JT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ky-Uv-Xjt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arView>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEu-qg-vxt">
+                                <rect key="frame" x="82" y="408" width="250" height="80"/>
+                                <color key="backgroundColor" red="0.28966890842027793" green="0.36622866220436795" blue="0.47869684278350511" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="jaN-tv-hM5"/>
+                                    <constraint firstAttribute="width" constant="250" id="u2r-Dw-uRu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="スタート！">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="40"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="SM0-yo-Hg1" kind="presentation" modalPresentationStyle="fullScreen" id="6d5-x8-JKB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wXP-fQ-NB8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UEu-qg-vxt" firstAttribute="centerX" secondItem="1ky-Uv-Xjt" secondAttribute="centerX" id="TM7-w8-xDu"/>
+                            <constraint firstItem="UEu-qg-vxt" firstAttribute="centerY" secondItem="1ky-Uv-Xjt" secondAttribute="centerY" id="s6R-03-Ybu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUd-8w-7w1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097.1014492753625" y="227.67857142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TG3-It-Zd7">
+            <objects>
+                <viewController id="SM0-yo-Hg1" customClass="ViewController" customModule="swimeeAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aO8-wG-f7f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGF-Sb-yHh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUL-l5-3u8">
+                                <rect key="frame" x="20" y="44" width="100" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ixh-Ey-Sed">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOl-WJ-Pb7">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="LOl-WJ-Pb7" secondAttribute="trailing" id="gD5-T1-dWF"/>
+                                        <constraint firstItem="LOl-WJ-Pb7" firstAttribute="top" secondItem="ixh-Ey-Sed" secondAttribute="top" id="lga-oQ-Kah"/>
+                                        <constraint firstItem="LOl-WJ-Pb7" firstAttribute="leading" secondItem="ixh-Ey-Sed" secondAttribute="leading" id="uUU-Uo-7Ec"/>
+                                        <constraint firstAttribute="bottom" secondItem="LOl-WJ-Pb7" secondAttribute="bottom" id="zBe-Ya-HB5"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ucl-Ro-ewy"/>
+                                    <constraint firstAttribute="width" constant="100" id="rgt-dJ-RjY"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpE-ye-Ev0">
+                                <rect key="frame" x="294" y="44" width="100" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FP3-uo-Ct1">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="s3D-id-zzv">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="s3D-id-zzv" secondAttribute="bottom" id="7KC-iZ-egb"/>
+                                        <constraint firstAttribute="bottom" secondItem="s3D-id-zzv" secondAttribute="bottom" id="T2i-aw-ScP"/>
+                                        <constraint firstItem="s3D-id-zzv" firstAttribute="top" secondItem="FP3-uo-Ct1" secondAttribute="top" id="VAN-13-M3z"/>
+                                        <constraint firstItem="s3D-id-zzv" firstAttribute="leading" secondItem="FP3-uo-Ct1" secondAttribute="leading" id="hQh-Rv-gne"/>
+                                        <constraint firstItem="s3D-id-zzv" firstAttribute="leading" secondItem="FP3-uo-Ct1" secondAttribute="leading" id="i7T-CC-vst"/>
+                                        <constraint firstAttribute="trailing" secondItem="s3D-id-zzv" secondAttribute="trailing" id="jaN-9K-Mcg"/>
+                                        <constraint firstAttribute="trailing" secondItem="s3D-id-zzv" secondAttribute="trailing" id="web-4h-fXk"/>
+                                        <constraint firstItem="s3D-id-zzv" firstAttribute="top" secondItem="FP3-uo-Ct1" secondAttribute="top" id="yMR-0p-W9C"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="bwV-ov-sbM"/>
+                                    <constraint firstAttribute="height" constant="50" id="yoE-pR-3gd"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D6y-Vs-r8D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QUL-l5-3u8" firstAttribute="leading" secondItem="aO8-wG-f7f" secondAttribute="leadingMargin" id="1UY-ac-eTC"/>
+                            <constraint firstItem="QUL-l5-3u8" firstAttribute="top" secondItem="D6y-Vs-r8D" secondAttribute="top" id="CWI-fL-SNb"/>
+                            <constraint firstItem="BGF-Sb-yHh" firstAttribute="trailing" secondItem="D6y-Vs-r8D" secondAttribute="trailing" id="Ofs-FB-FDY"/>
+                            <constraint firstItem="BGF-Sb-yHh" firstAttribute="top" secondItem="aO8-wG-f7f" secondAttribute="top" id="TfP-ls-BYJ"/>
+                            <constraint firstItem="BGF-Sb-yHh" firstAttribute="leading" secondItem="D6y-Vs-r8D" secondAttribute="leading" id="Y4h-fN-RUd"/>
+                            <constraint firstItem="jpE-ye-Ev0" firstAttribute="top" secondItem="D6y-Vs-r8D" secondAttribute="top" id="dNJ-6Z-k1v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jpE-ye-Ev0" secondAttribute="trailing" id="ksF-kt-gnu"/>
+                            <constraint firstAttribute="bottom" secondItem="BGF-Sb-yHh" secondAttribute="bottom" id="uHm-Vk-IBm"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <outlet property="arView" destination="8bC-Xf-vdC" id="TPV-4x-avp"/>
+                        <outlet property="arView" destination="BGF-Sb-yHh" id="Hhj-uF-ya9"/>
+                        <outlet property="scoreLabel" destination="LOl-WJ-Pb7" id="8oy-cA-BfU"/>
+                        <outlet property="timerLabel" destination="s3D-id-zzv" id="qmC-E6-GN0"/>
+                        <outletCollection property="backgrounds" destination="QUL-l5-3u8" collectionClass="NSMutableArray" id="u9r-KT-X6H"/>
+                        <outletCollection property="backgrounds" destination="jpE-ye-Ev0" collectionClass="NSMutableArray" id="e6H-bj-Yyy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frV-eD-7Mb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="134"/>
+            <point key="canvasLocation" x="-343.47826086956525" y="228.34821428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

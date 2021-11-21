@@ -13,6 +13,8 @@
 		77486E24274A107B0092F8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77486E22274A107B0092F8AA /* Main.storyboard */; };
 		77486E26274A107B0092F8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77486E25274A107B0092F8AA /* Assets.xcassets */; };
 		77486E29274A107B0092F8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77486E27274A107B0092F8AA /* LaunchScreen.storyboard */; };
+		77754F43274A47B8008E1AF3 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77754F42274A47B8008E1AF3 /* IntExtension.swift */; };
+		77754F45274A4AD9008E1AF3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77754F44274A4AD9008E1AF3 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		77486E23274A107B0092F8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77486E25274A107B0092F8AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77486E28274A107B0092F8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77754F42274A47B8008E1AF3 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		77754F44274A4AD9008E1AF3 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			children = (
 				77486E1C274A107B0092F8AA /* AppDelegate.swift */,
 				77486E1E274A107B0092F8AA /* ViewController.swift */,
+				77754F42274A47B8008E1AF3 /* IntExtension.swift */,
+				77754F44274A4AD9008E1AF3 /* UIViewExtension.swift */,
 				77486E20274A107B0092F8AA /* Experience.rcproject */,
 				77486E22274A107B0092F8AA /* Main.storyboard */,
 				77486E25274A107B0092F8AA /* Assets.xcassets */,
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77754F45274A4AD9008E1AF3 /* UIViewExtension.swift in Sources */,
 				77486E1F274A107B0092F8AA /* ViewController.swift in Sources */,
+				77754F43274A47B8008E1AF3 /* IntExtension.swift in Sources */,
 				77486E1D274A107B0092F8AA /* AppDelegate.swift in Sources */,
 				77486E21274A107B0092F8AA /* Experience.rcproject in Sources */,
 			);
@@ -295,8 +303,10 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +316,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,8 +335,10 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -336,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
